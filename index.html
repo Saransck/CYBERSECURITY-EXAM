@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>CYBERSECURITY EXAM & PRETEST HUB - ระบบฝึกทำข้อสอบความมั่นคงไซเบอร์</title>
+  <meta name="description" content="ระบบฝึกทำข้อสอบวิชา Cybersecurity รวบรวมข้อสอบ Pretest แปลไทย แนวข้อสอบ Final และโจทย์ปฏิบัติการ Lab พร้อมระบบจับเวลา เฉลยละเอียด และการวิเคราะห์ผลลัพธ์">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CyberSec Exam">
+  <meta name="theme-color" content="#070a12">
+  
+  <!-- Google Fonts: Prompt & JetBrains Mono & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="brand-area">
+        <div class="brand-logo">🛡️</div>
+        <div class="brand-info">
+          <h1>CYBERSEC :: EXAM MATRIX</h1>
+          <span class="brand-badge">ACADEMIC EDITION v2.4</span>
+        </div>
+      </div>
+      
+      <div class="header-controls">
+        <button id="soundToggleBtn" class="cyber-btn active" title="เปิด/ปิดเสียงเอฟเฟกต์">
+          🔊 เสียงเปิด
+        </button>
+        <button id="resetBtn" class="cyber-btn danger" title="รีเซ็ตคำตอบในชุดนี้">
+          🔄 รีเซ็ตคำตอบ
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation & Section Tabs -->
+    <nav class="nav-panel">
+      <div class="section-tabs" role="tablist">
+        <button class="tab-btn active" data-section="pretest" role="tab" id="tab-pretest">
+          <span>📘 Pretest (แปลไทย)</span>
+          <span class="tab-badge">25 ข้อ</span>
+        </button>
+        <button class="tab-btn" data-section="exam" role="tab" id="tab-exam">
+          <span>🎯 แนวข้อสอบ Final</span>
+          <span class="tab-badge">22 ข้อ</span>
+        </button>
+        <button class="tab-btn" data-section="lab" role="tab" id="tab-lab">
+          <span>🧪 แนวข้อสอบแลป</span>
+          <span class="tab-badge">10 ข้อ</span>
+        </button>
+        <button class="tab-btn" data-section="ncsa" role="tab" id="tab-ncsa">
+          <span>🌐 NCSA Pentest Labs</span>
+          <span class="tab-badge">148 ข้อ</span>
+        </button>
+        <button class="tab-btn" data-section="mock" role="tab" id="tab-mock">
+          <span>🏆 Mock Exam (รวมทุกชุด)</span>
+          <span class="tab-badge">205 ข้อ</span>
+        </button>
+      </div>
+
+      <!-- Sub-Bar: Mode Controls, Language Toggle & Timer -->
+      <div class="sub-bar">
+        <div class="mode-switcher">
+          <span class="mode-label">โหมดการเรียนรู้:</span>
+          <div class="mode-chip active" data-mode="practice">
+            <span>⚡ โหมดฝึกฝน (เฉลยทันที)</span>
+          </div>
+          <div class="mode-chip" data-mode="exam">
+            <span>⏱️ โหมดสอบจริง (จับเวลา)</span>
+          </div>
+          <div class="mode-chip" data-mode="flashcard">
+            <span>🃏 แฟลชการ์ด</span>
+          </div>
+        </div>
+
+        <div class="sub-tools">
+          <!-- Language Toggle for Pretest -->
+          <div class="lang-toggle-group" id="langToggleGroup">
+            <button class="lang-btn active" data-lang="both" title="แสดงทั้งภาษาไทยและภาษาอังกฤษ">คู่ขนาน TH/EN</button>
+            <button class="lang-btn" data-lang="th" title="แสดงเฉพาะภาษาไทย">ไทยล้วน</button>
+            <button class="lang-btn" data-lang="en" title="Show English Only">EN Only</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Workspace -->
+    <main class="main-workspace">
+      
+      <!-- Left Column: Exam/Question Area -->
+      <section class="exam-view" id="examView">
+        
+        <!-- Progress & Meta Header -->
+        <div class="exam-meta-bar">
+          <div class="meta-left">
+            <span class="q-counter" id="qCounter">ข้อที่ 1 / 25</span>
+            <span class="q-category-tag" id="qCategoryTag">Reconnaissance</span>
+          </div>
+          
+          <div class="timer-box" id="timerBox" style="display: none;">
+            <span>⏱️</span>
+            <span id="timerDisplay">90:00</span>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Question Card -->
+        <article class="question-card" id="questionCard">
+          <div class="question-prompt">
+            <h2 class="question-text-th" id="questionTextTh">กำลังโหลดข้อสอบ...</h2>
+            <div class="question-text-en" id="questionTextEn" style="display: none;"></div>
+          </div>
+
+          <!-- Code or Snippet Container -->
+          <div class="code-snippet-box" id="codeSnippetContainer" style="display: none;"></div>
+
+          <!-- Multiple Choice Options Container -->
+          <div class="options-list" id="optionsList"></div>
+
+          <!-- Fill-in Question Input Area -->
+          <div class="fill-in-container" id="fillContainer" style="display: none;">
+            <div class="fill-input-wrapper">
+              <input type="text" id="fillInput" class="cyber-input" placeholder="พิมพ์คำตอบของคุณที่นี่ (เช่น คำสั่ง, คำศัพท์, หรือตัวเลข)..." autocomplete="off" spellcheck="false">
+              <button id="fillSubmitBtn" class="cyber-btn primary">ตรวจสอบคำตอบ</button>
+            </div>
+            <div class="fill-hint-text">
+              💡 เคล็ดลับ: ระบบตรวจคำตอบแบบยืดหยุ่น (ไม่สนใจตัวพิมพ์เล็ก-ใหญ่ และเว้นวรรค) หรือกด Enter เพื่อตรวจทันที
+            </div>
+          </div>
+
+          <!-- Explanation & Cybersecurity Review Notes -->
+          <div class="explanation-card" id="explanationCard" style="display: none;">
+            <div class="exp-header">
+              <span>🛡️ เจาะลึกคำตอบ & เทคนิคความปลอดภัย:</span>
+            </div>
+            <div class="exp-body" id="expText"></div>
+          </div>
+        </article>
+
+        <!-- Bottom Controls -->
+        <div class="nav-controls-bar">
+          <div class="nav-left">
+            <button id="prevBtn" class="cyber-btn">
+              <span>← ก่อนหน้า</span>
+            </button>
+            <button id="nextBtn" class="cyber-btn">
+              <span>ถัดไป →</span>
+            </button>
+          </div>
+
+          <div class="nav-right">
+            <button id="flagBtn" class="cyber-btn">
+              <span>☆ ปักหมุดทบทวน</span>
+            </button>
+            <button id="submitExamBtn" class="cyber-btn emerald" style="display: none;">
+              <span>📝 ส่งกระดาษคำตอบ</span>
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Flashcard View (Hidden by default) -->
+      <section class="flashcard-view" id="flashcardView" style="display: none;">
+        <div class="flashcard-scene" id="cardScene">
+          <div class="flashcard-3d" id="card3d">
+            <!-- Front Face: Question -->
+            <div class="card-face front">
+              <div class="card-tag">
+                <span id="cardCategory">CATEGORY</span>
+                <span id="cardLangTag">TH/EN</span>
+              </div>
+              <div class="card-main-text" id="cardFrontText">คำถามจะแสดงที่นี่</div>
+              <div class="card-hint">👆 คลิกที่การ์ด หรือกด Spacebar เพื่อดูเฉลย</div>
+            </div>
+            <!-- Back Face: Answer -->
+            <div class="card-face back">
+              <div class="card-tag">
+                <span>🛡️ เฉลย & คำอธิบาย</span>
+                <span>SOLUTION</span>
+              </div>
+              <div class="card-answer-text" id="cardBackAnswer">คำตอบ</div>
+              <div class="card-answer-exp" id="cardBackExp">คำอธิบาย</div>
+              <div class="card-hint">👆 คลิกที่การ์ดเพื่อพลิกกลับ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flashcard-controls">
+          <button id="fcPrevBtn" class="cyber-btn">← ก่อนหน้า</button>
+          <button id="fcFlipBtn" class="cyber-btn primary">🔄 พลิกการ์ด (Space)</button>
+          <button id="fcNextBtn" class="cyber-btn">ถัดไป →</button>
+        </div>
+        <div style="font-family: var(--font-mono); color: var(--accent-cyan); font-size: 0.9rem;" id="fcCounter">1 / 25</div>
+      </section>
+
+      <!-- Right Column: Sidebar with Question Grid Matrix -->
+      <aside class="sidebar-panel">
+        
+        <!-- Question Matrix Card -->
+        <div class="matrix-card">
+          <div class="matrix-title">
+            <span>🗺️ แผนผังข้อสอบ</span>
+            <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-cyan);">
+              <span id="answeredCountSpan">0</span>/<span id="totalCountSpan">25</span>
+            </span>
+          </div>
+
+          <div class="matrix-legend">
+            <div class="legend-item"><span class="legend-dot answered"></span> ตอบแล้ว</div>
+            <div class="legend-item"><span class="legend-dot unanswered"></span> ยังไม่ตอบ</div>
+            <div class="legend-item"><span class="legend-dot flagged"></span> ปักหมุด</div>
+            <div class="legend-item"><span class="legend-dot correct"></span> ถูก</div>
+            <div class="legend-item"><span class="legend-dot wrong"></span> ผิด</div>
+          </div>
+
+          <div class="question-grid" id="questionGrid"></div>
+        </div>
+
+        <!-- Quick Tips & Shortcuts -->
+        <div class="quick-tips-card">
+          <div class="tips-title">
+            <span>⚡ คีย์ลัด (Keyboard Shortcuts)</span>
+          </div>
+          <div class="tips-content">
+            <ul>
+              <li><strong>เลข 1, 2, 3, 4:</strong> เลือกช้อยส์ A, B, C, D</li>
+              <li><strong>ลูกศร ซ้าย / ขวา:</strong> ข้อก่อนหน้า / ถัดไป</li>
+              <li><strong>ปุ่ม F:</strong> ปักหมุดข้อที่ต้องการทบทวน</li>
+              <li><strong>ปุ่ม Spacebar:</strong> พลิกหน้าแฟลชการ์ด</li>
+              <li><strong>ปุ่ม Enter:</strong> ตรวจคำตอบข้อพิมพ์</li>
+            </ul>
+          </div>
+        </div>
+
+      </aside>
+
+    </main>
+
+    <!-- Score & Analysis Modal -->
+    <div class="score-modal-overlay" id="scoreModal" style="display: none;">
+      <div class="score-card">
+        <div class="score-header">
+          <div class="score-badge-circle">
+            <span class="rank-text" id="scoreRank">S</span>
+            <span class="rank-sub" id="scoreRankSub">RANK</span>
+          </div>
+          <h2 class="score-title">สรุปผลการประเมิน Cybersecurity</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">รายงานผลคะแนนและการวิเคราะห์ทักษะความมั่นคงปลอดภัย</p>
+        </div>
+
+        <div class="score-stats-grid">
+          <div class="stat-item">
+            <div class="stat-value" id="scoreTotalText">25 / 25</div>
+            <div class="stat-label">คะแนนที่ได้</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="scorePercentText">100%</div>
+            <div class="stat-label">ความแม่นยำ</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="scoreTimeText">12m 45s</div>
+            <div class="stat-label">เวลาที่ใช้</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 0.95rem; font-weight: 600; color: #ffffff; margin-bottom: 12px;">📊 สถิติความแม่นยำแยกตามหมวดหมู่</h3>
+          <div class="category-breakdown" id="catBreakdownList"></div>
+        </div>
+
+        <div class="score-actions">
+          <button id="scoreRetakeBtn" class="cyber-btn primary">🔄 ทำใหม่อีกครั้ง</button>
+          <button id="scoreReviewMistakesBtn" class="cyber-btn danger">🔍 ทบทวนข้อที่ตอบผิด</button>
+          <button id="scoreCloseBtn" class="cyber-btn">ปิดหน้าต่างสรุป</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

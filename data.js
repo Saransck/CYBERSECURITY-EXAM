@@ -2849,12 +2849,12 @@ const QUESTION_BANK = {
     "questionType": "VM",
     "question": "ลบไฟล์ /upload/testfile จากนั้นเวลาผ่านไปประมาณ 1 นาที จะมี flag อยู่ภายใต้ /upload/",
     "options": [],
-    "answer": null,
+    "answer": "web{BFGC6M0hWd}",
     "accepted_texts": [],
     "answer_display": "Flag หรือคำตอบจากการปฏิบัติการบน Lab เครื่องเป้าหมาย",
     "explanation": "ข้อสอบจากหลักสูตร Penetration Testing (Chapter 7 - Web Security) ในหัวข้อ \"DELETE Method\" (VM)\n\n💡 แนวทางการทำ:\n- ประเภทโจทย์: VM\n- รายละเอียด: ศึกษาคำอธิบายทฤษฎีในเนื้อหาบทเรียน หรือเข้าควบคุมเครื่องจำลอง (Target Instance) เพื่อตรวจสอบ Service/ไฟล์คอนฟิก/ช่องโหว่ แล้วดึงค่า Flag ออกมาตอบ",
     "fileUrl": null,
-    "isFinished": false
+    "isFinished": true
   },
   {
     "id": "ncsa_101",
@@ -2867,12 +2867,12 @@ const QUESTION_BANK = {
     "questionType": "VM",
     "question": "ให้กระทำการอ่านไฟล์ลับโดยเราสามารถหาไฟล์ลับได้จากการอ่าน robots.txt ของระบบก่อน จากนั้นจึงเปิดไฟล์",
     "options": [],
-    "answer": null,
+    "answer": "web{cPXveqFjNP}",
     "accepted_texts": [],
     "answer_display": "Flag หรือคำตอบจากการปฏิบัติการบน Lab เครื่องเป้าหมาย",
     "explanation": "ข้อสอบจากหลักสูตร Penetration Testing (Chapter 7 - Web Security) ในหัวข้อ \"Robots.txt คืออะไร\" (VM)\n\n💡 แนวทางการทำ:\n- ประเภทโจทย์: VM\n- รายละเอียด: ศึกษาคำอธิบายทฤษฎีในเนื้อหาบทเรียน หรือเข้าควบคุมเครื่องจำลอง (Target Instance) เพื่อตรวจสอบ Service/ไฟล์คอนฟิก/ช่องโหว่ แล้วดึงค่า Flag ออกมาตอบ",
     "fileUrl": null,
-    "isFinished": false
+    "isFinished": true
   },
   {
     "id": "ncsa_102",
@@ -2885,12 +2885,12 @@ const QUESTION_BANK = {
     "questionType": "VM",
     "question": "ให้กระทำการหา folder ลับภายในเว็บไซด์ซึ่งเป็นเป้าหมาย จากนั้นเข้าไปอ่าน flag ที่ถูกซ่อนไว้ใน folder ดังกล่าว",
     "options": [],
-    "answer": null,
+    "answer": "web{d3FzESXNRN}",
     "accepted_texts": [],
     "answer_display": "Flag หรือคำตอบจากการปฏิบัติการบน Lab เครื่องเป้าหมาย",
     "explanation": "ข้อสอบจากหลักสูตร Penetration Testing (Chapter 7 - Web Security) ในหัวข้อ \"Directory Listing\" (VM)\n\n💡 แนวทางการทำ:\n- ประเภทโจทย์: VM\n- รายละเอียด: ศึกษาคำอธิบายทฤษฎีในเนื้อหาบทเรียน หรือเข้าควบคุมเครื่องจำลอง (Target Instance) เพื่อตรวจสอบ Service/ไฟล์คอนฟิก/ช่องโหว่ แล้วดึงค่า Flag ออกมาตอบ",
     "fileUrl": null,
-    "isFinished": false
+    "isFinished": true
   },
   {
     "id": "ncsa_103",
@@ -2921,12 +2921,12 @@ const QUESTION_BANK = {
     "questionType": "VM",
     "question": "Login จาก form ที่ใช้ Javascript ในการตรวจสอบ username, password แล้วจะพบคำตอบของบทเรียนนี้",
     "options": [],
-    "answer": null,
+    "answer": "web{hCGK81MLFH}",
     "accepted_texts": [],
     "answer_display": "Flag หรือคำตอบจากการปฏิบัติการบน Lab เครื่องเป้าหมาย",
     "explanation": "ข้อสอบจากหลักสูตร Penetration Testing (Chapter 7 - Web Security) ในหัวข้อ \"วิธีการผ่านหน้า Javascript login\" (VM)\n\n💡 แนวทางการทำ:\n- ประเภทโจทย์: VM\n- รายละเอียด: ศึกษาคำอธิบายทฤษฎีในเนื้อหาบทเรียน หรือเข้าควบคุมเครื่องจำลอง (Target Instance) เพื่อตรวจสอบ Service/ไฟล์คอนฟิก/ช่องโหว่ แล้วดึงค่า Flag ออกมาตอบ",
     "fileUrl": null,
-    "isFinished": false
+    "isFinished": true
   },
   {
     "id": "ncsa_105",
@@ -2939,12 +2939,12 @@ const QUESTION_BANK = {
     "questionType": "VM",
     "question": "เว็บไซต์ในบทเรียนนี้จะจำลอง password ของเว็บไซต์ถูก autocomplete ไว้ ให้เรากระทำการตรวจสอบ password เพื่อให้ได้ flag ของบทเรียนนี้ *** หมายเหตุโจทย์ในบทเรียนนี้เป็นการจำลองการเข้าถึงเครื่องของ user แบบ physical",
     "options": [],
-    "answer": null,
+    "answer": "web{OB5Uuin4cE}",
     "accepted_texts": [],
     "answer_display": "Flag หรือคำตอบจากการปฏิบัติการบน Lab เครื่องเป้าหมาย",
     "explanation": "ข้อสอบจากหลักสูตร Penetration Testing (Chapter 7 - Web Security) ในหัวข้อ \"Autocomplete\" (VM)\n\n💡 แนวทางการทำ:\n- ประเภทโจทย์: VM\n- รายละเอียด: ศึกษาคำอธิบายทฤษฎีในเนื้อหาบทเรียน หรือเข้าควบคุมเครื่องจำลอง (Target Instance) เพื่อตรวจสอบ Service/ไฟล์คอนฟิก/ช่องโหว่ แล้วดึงค่า Flag ออกมาตอบ",
     "fileUrl": null,
-    "isFinished": false
+    "isFinished": true
   },
   {
     "id": "ncsa_106",
@@ -2957,12 +2957,12 @@ const QUESTION_BANK = {
     "questionType": "VM",
     "question": "ให้หา flag ที่ซ่อนอยู่ในไฟล์ backup ของ index.php",
     "options": [],
-    "answer": null,
+    "answer": "web{ggfyLgmiGs}",
     "accepted_texts": [],
     "answer_display": "Flag หรือคำตอบจากการปฏิบัติการบน Lab เครื่องเป้าหมาย",
     "explanation": "ข้อสอบจากหลักสูตร Penetration Testing (Chapter 7 - Web Security) ในหัวข้อ \"Backup Lab\" (VM)\n\n💡 แนวทางการทำ:\n- ประเภทโจทย์: VM\n- รายละเอียด: ศึกษาคำอธิบายทฤษฎีในเนื้อหาบทเรียน หรือเข้าควบคุมเครื่องจำลอง (Target Instance) เพื่อตรวจสอบ Service/ไฟล์คอนฟิก/ช่องโหว่ แล้วดึงค่า Flag ออกมาตอบ",
     "fileUrl": null,
-    "isFinished": false
+    "isFinished": true
   },
   {
     "id": "ncsa_107",
@@ -2975,12 +2975,12 @@ const QUESTION_BANK = {
     "questionType": "VM",
     "question": "ให้หา flag ที่ซ่อนอยู่ในไฟล์ backup ของ index.php ที่เคยถูกเปิดด้วย vim",
     "options": [],
-    "answer": null,
+    "answer": "web{hnPNgwra45}",
     "accepted_texts": [],
     "answer_display": "Flag หรือคำตอบจากการปฏิบัติการบน Lab เครื่องเป้าหมาย",
     "explanation": "ข้อสอบจากหลักสูตร Penetration Testing (Chapter 7 - Web Security) ในหัวข้อ \"Backup Lab#2\" (VM)\n\n💡 แนวทางการทำ:\n- ประเภทโจทย์: VM\n- รายละเอียด: ศึกษาคำอธิบายทฤษฎีในเนื้อหาบทเรียน หรือเข้าควบคุมเครื่องจำลอง (Target Instance) เพื่อตรวจสอบ Service/ไฟล์คอนฟิก/ช่องโหว่ แล้วดึงค่า Flag ออกมาตอบ",
     "fileUrl": null,
-    "isFinished": false
+    "isFinished": true
   },
   {
     "id": "ncsa_108",
@@ -3245,12 +3245,12 @@ const QUESTION_BANK = {
     "questionType": "VM",
     "question": "เข้าไปอ่าน flag ในหน้า index ผ่านการใช้งาน X-Forwarded-For Header ให้เป็น IP ของเครื่อง Server เอง",
     "options": [],
-    "answer": null,
+    "answer": "web{QPK0KEFvXu}",
     "accepted_texts": [],
     "answer_display": "Flag หรือคำตอบจากการปฏิบัติการบน Lab เครื่องเป้าหมาย",
     "explanation": "ข้อสอบจากหลักสูตร Penetration Testing (Chapter 7 - Web Security) ในหัวข้อ \"ตรวจ IP หลัง Proxy ด้วย X-Forwarded-For\" (VM)\n\n💡 แนวทางการทำ:\n- ประเภทโจทย์: VM\n- รายละเอียด: ศึกษาคำอธิบายทฤษฎีในเนื้อหาบทเรียน หรือเข้าควบคุมเครื่องจำลอง (Target Instance) เพื่อตรวจสอบ Service/ไฟล์คอนฟิก/ช่องโหว่ แล้วดึงค่า Flag ออกมาตอบ",
     "fileUrl": null,
-    "isFinished": false
+    "isFinished": true
   },
   {
     "id": "ncsa_123",
@@ -3389,12 +3389,12 @@ const QUESTION_BANK = {
     "questionType": "VM",
     "question": "โจทย์ในข้อนี้คือการ login เป็น\nuser: noob\r\npassword: N00bP@ssw0rdผ่าน browser จากนั้นพยายามหา password ของ root user ที่พยายามจะถูก set ผ่าน noob user ครับ จากนั้นค้นหา flag ที่อยู่ภายใต้ root home",
     "options": [],
-    "answer": null,
+    "answer": "system{ZiLuxVG81v}",
     "accepted_texts": [],
     "answer_display": "Flag หรือคำตอบจากการปฏิบัติการบน Lab เครื่องเป้าหมาย",
     "explanation": "ข้อสอบจากหลักสูตร Penetration Testing (Chapter 8 - Post Explotiation) ในหัวข้อ \"Password in history\" (VM)\n\n💡 แนวทางการทำ:\n- ประเภทโจทย์: VM\n- รายละเอียด: ศึกษาคำอธิบายทฤษฎีในเนื้อหาบทเรียน หรือเข้าควบคุมเครื่องจำลอง (Target Instance) เพื่อตรวจสอบ Service/ไฟล์คอนฟิก/ช่องโหว่ แล้วดึงค่า Flag ออกมาตอบ",
     "fileUrl": null,
-    "isFinished": false
+    "isFinished": true
   },
   {
     "id": "ncsa_131",
